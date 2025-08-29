@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Contato</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Cor de fundo */
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #333366; /* Cor do título */
+        }
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 350px;
+            margin: 40px auto; /* Centraliza o formulário */
+        }
+        label {
+            color: #333366; /* Cor dos rótulos */
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #333366;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #333366;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555599;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Contato</h1>
+    <form>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
