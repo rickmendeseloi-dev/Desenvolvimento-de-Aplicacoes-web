@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Caixa Eletrônico</title>
+</head>
+<body>
+<script> 
+    let saldo = 1000; 
+    let opcao = -1;   
+
+    while (opcao !== 0) {
+        opcao = parseInt(prompt(
+            "=== Caixa Eletrônico ===\n" +
+            "1 - Ver saldo\n" +
+            "2 - Depositar\n" +
+            "3 - Sacar\n" +
+            "0 - Sair"
+        ));
+
+        if (opcao === 1) {
+            alert("Seu saldo é: R$ " + saldo.toFixed(2));
+        } 
+        else if (opcao === 2) {
+            let deposito = parseFloat(prompt("Digite o valor para depósito:"));
+            if (deposito > 0) {
+                saldo += deposito;
+                alert("Depósito realizado! Novo saldo: R$ " + saldo.toFixed(2));
+            } else {
+                alert("Valor inválido.");
+            }
+        } 
+        else if (opcao === 3) {
+            let saque = parseFloat(prompt("Digite o valor para saque:"));
+            if (saque > 0 && saque <= saldo) {
+                saldo -= saque;
+                alert("Saque realizado! Novo saldo: R$ " + saldo.toFixed(2));
+            } else {
+                alert("Saldo insuficiente ou valor inválido.");
+            }
+        } 
+        else if (opcao === 0) {
+            alert("Obrigado por usar nosso caixa eletrônico!");
+        } 
+        else {
+            alert("Opção inválida. Tente novamente.");
+        }
+    }
+</script>
+</body>
+</html>
