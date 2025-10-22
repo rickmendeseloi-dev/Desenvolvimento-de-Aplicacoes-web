@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <button id="subtrair">−</button>
+    <button id="meuBotao">+</button>
+    <span id="display">0</span>
+
+    <script>
+        let botao = document.getElementById("meuBotao");
+        let botaoMinus = document.getElementById("subtrair");
+        let display = document.getElementById("display");
+        let contador = 0;
+
+        function update() {
+            display.textContent = contador;
+        }
+
+        botao.addEventListener("click", () => {
+            contador++;
+            update();
+        });
+
+        botaoMinus.addEventListener("click", () => {
+            if (contador > 0) {
+                contador--;
+                update();
+            }
+        });
+        botao.style.fontSize = "24px"; 
+        botaoMinus.style.fontSize = "24px";
+        botao.style.cursor = "pointer";
+        botaoMinus.style.cursor = "pointer";
+        display.style.marginLeft = "8px";
+        display.style.fontSize = "20px";
+        display.style.minWidth = "30px";
+        display.style.display = "inline-block";
+        display.style.textAlign = "center";
+
+        update();
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Novo Titulo</h1>
+   <ol>
+       <li class="item">Item 1</li>
+       <li class="item">Item 2</li>
+       <li class="item">Item 3</li>
+   </ol>
+
+   <script>
+    let titulo = document.getElementById("titulo");
+    let itens = document.getElementsByClassName("item");
+    
+    titulo.textContent = "Novo Titulo";
+    for(let C = 0; C < itens.length ; C++) {
+        itens[C].textContent = "Novo Titulo " + C ;
+        itens[C].style.cursor = "pointer"
+        itens[C].addEventListener("click", () => {
+           alert(itens[c].textContent)
+       })
+    }
+    titulo.style.color = "blue";
+    titulo.style.fontSize ="24px";
+
+    console.log(titulo);
+    console.log(itens);
+
+   </script>
+</body>
+</html>
